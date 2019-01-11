@@ -10,7 +10,7 @@ const Character = (props) => {
             return res.json();
             })
             .then (data => {
-                document.querySelector('.char-species').innerHTML = data.name
+                document.getElementById(`${props.char.name}`).innerHTML = data.name
             })
             .catch(err => {
             throw new Error(err);
@@ -21,7 +21,7 @@ const Character = (props) => {
         <div className="char-card">
             <div className="char-img"></div>
             <h3>{props.char.name}</h3>
-            <p className="char-species">{getSpecies(`${props.char.species[0]}`)}</p>
+            <p className="char-species" id={props.char.name}>{getSpecies(`${props.char.species[0]}`)}</p>
             <ul>
                 <li>Gender: {props.char.gender}</li>
                 <li>Height: {props.char.height}</li>
