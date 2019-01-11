@@ -11,14 +11,12 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.getCharacters('https://swapi.co/api/people');
+    this.getCharacters('https://swapi.co/api/people/');
   }
 
   getCharacters = (URL) => {
-
-    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
     
-    fetch(proxyUrl + URL)
+    fetch(URL)
       .then(res => {
         return res.json();
       })
@@ -33,7 +31,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1 className="Header">React Wars</h1>
+        <h1 className="Header">React Wars Character Cards</h1>
         <CharacterCards characters={this.state.starwarsChars}/>
       </div>
     );
