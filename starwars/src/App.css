@@ -10,5 +10,17 @@
 ul, ol, li {
   list-style: none;
   margin: 0;
+  padding: 1%;
+}
+
+h3 {
+  font-size: 1.4em;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 1.0em;
+  margin: 0;
   padding: 0;
 }

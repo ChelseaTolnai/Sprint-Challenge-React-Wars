@@ -20,9 +20,11 @@ const Character = (props) => {
     return (
         <div className="char-card">
             <div className="char-img"></div>
-            <h3>{props.char.name}</h3>
-            <p className="char-species" id={props.char.name}>{getSpecies(`${props.char.species[0]}`)}</p>
-            <ul>
+            <div className="char-head">
+                <h3 className="char-name">{props.char.name}</h3>
+                <p className="char-species" id={props.char.name}>{getSpecies(`${props.char.species[0]}`)}</p>
+            </div>
+            <ul className="char-list"> 
                 <li>Gender: {props.char.gender}</li>
                 <li>Height: {props.char.height}</li>
                 <li>Mass: {props.char.mass}</li>

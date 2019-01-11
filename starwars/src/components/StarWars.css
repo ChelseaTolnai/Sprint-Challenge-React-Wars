@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     justify-content: center
 }
+
 .char-card {
     background-color: black;
     color: gold;
@@ -11,6 +12,23 @@
     height: 300px;
     margin: 10px;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.char-head {
+    height: 50px;
+    margin: 10px;
+    padding: 2% 2% 0;
+    background-color: gold;
+    color: black;
+    border-radius: 5px;
+}
+
+.char-name {
+    height: 50%;
+    font-size: 2vw;
 }
 
 .char-img {
@@ -19,6 +37,7 @@
     height: 100px;
 
     background-image: url('https://lumiere-a.akamaihd.net/v1/images/og-generic_02031d2b.png?region=0%2C0%2C1200%2C1200');
-    background-size: 100% auto;
+    background-size: 120% auto;
     background-position: 50% 50%;
 }
+
