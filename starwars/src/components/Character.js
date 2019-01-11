@@ -6,26 +6,22 @@ const Character = (props) => {
     function getSpecies(URL) {
 
         fetch(URL)
-          .then(res => {
+            .then(res => {
             return res.json();
-          })
-          .then (data => {
-              console.log(data)
-            return data
-          })
-          .catch(err => {
+            })
+            .then (data => {
+                document.querySelector('.char-species').innerHTML = data.name
+            })
+            .catch(err => {
             throw new Error(err);
-          }); 
-
+            }); 
     };
 
     return (
         <div className="char-card">
-            <div className="char-img">
-                {/* <img clasName="img" src={require("../starwars.png")} alt="Star Wars logo"/> */}
-            </div>
+            <div className="char-img"></div>
             <h3>{props.char.name}</h3>
-            <p>{getSpecies(`${props.char.species[0]}`)}</p>
+            <p className="char-species">{getSpecies(`${props.char.species[0]}`)}</p>
             <ul>
                 <li>Gender: {props.char.gender}</li>
                 <li>Height: {props.char.height}</li>

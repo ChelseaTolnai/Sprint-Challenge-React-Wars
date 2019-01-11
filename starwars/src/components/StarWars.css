@@ -2,10 +2,11 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center
 }
 .char-card {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: gold;
     width: 200px;
     height: 300px;
     margin: 10px;
@@ -14,14 +15,10 @@
 
 .char-img {
     margin: 2% auto;
-    width: 175px;
-    height: 75px;
+    width: 200px;
+    height: 100px;
 
     background-image: url('https://lumiere-a.akamaihd.net/v1/images/og-generic_02031d2b.png?region=0%2C0%2C1200%2C1200');
     background-size: 100% auto;
     background-position: 50% 50%;
 }
-
-/* img {
-    width: 100%;
-} */
